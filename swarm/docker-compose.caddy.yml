@@ -1,0 +1,11 @@
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: always
+    ports:
+      - "${CADDY_HTTP}:80"
+      - "${CADDY_HTTPS}:443"
+    volumes:
+      - ./caddy/data:/data
+      - ./caddy/config:/config
