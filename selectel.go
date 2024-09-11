@@ -1,4 +1,4 @@
-package selectelv2
+package selectel
 
 import (
 	// "fmt"
@@ -18,7 +18,7 @@ func init() {
 // CaddyModule returns the Caddy module information.
 func (Provider) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
-		ID:  "dns.providers.selectelv2",
+		ID:  "dns.providers.selectel",
 		New: func() caddy.Module { return &Provider{new(selectel.Provider)} },
 	}
 }
