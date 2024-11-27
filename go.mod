@@ -6,7 +6,7 @@ toolchain go1.23.0
 
 require (
 	github.com/caddyserver/caddy/v2 v2.8.4
-	github.com/libdns/timeweb v1.0.1
+	github.com/nlif-m/libdns-timeweb v1.0.2
 )
 
 require (
@@ -19,6 +19,7 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
 	github.com/libdns/libdns v0.2.2 // indirect
+	github.com/libdns/timeweb v1.0.1 // indirect
 	github.com/mholt/acmez/v2 v2.0.2 // indirect
 	github.com/miekg/dns v1.1.62 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect

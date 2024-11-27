@@ -3,7 +3,7 @@ package timewebcaddy
 import (
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
-	"github.com/libdns/timeweb"
+	timeweb "github.com/nlif-m/libdns-timeweb"
 )
 
 // Provider lets Caddy read and manipulate DNS records hosted by this DNS provider.
