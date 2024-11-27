@@ -17,7 +17,7 @@ func init() {
 func (Provider) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
 		ID:  "dns.providers.timeweb",
-		New: func() caddy.Module { return &Provider{timeweb.Provider{}} },
+		New: func() caddy.Module { return &Provider{new(timeweb.Provider)} },
 	}
 }
 
