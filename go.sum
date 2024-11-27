@@ -28,8 +28,8 @@ github.com/klauspost/cpuid/v2 v2.2.8 h1:+StwCXwm9PdpiEkPyzBXIy+M9KUb4ODm0Zarf1kS
 github.com/klauspost/cpuid/v2 v2.2.8/go.mod h1:Lcz8mBdAVJIBVzewtcLocK12l3Y+JytZYpaMropDUws=
 github.com/libdns/libdns v0.2.2 h1:O6ws7bAfRPaBsgAYt8MDe2HcNBGC29hkZ9MX2eUSX3s=
 github.com/libdns/libdns v0.2.2/go.mod h1:4Bj9+5CQiNMVGf87wjX4CY3HQJypUHRuLvlsfsZqLWQ=
-github.com/libdns/selectel v1.0.0 h1:Ppj/UlY+nFQXaZk4W+niMKVJSWSlbgUY8rtkXyim/hI=
-github.com/libdns/selectel v1.0.0/go.mod h1:0s7+DwZF8iNxSP46V+0xYBctHKNOfdqGr7DP3OcLs0c=
+github.com/libdns/timeweb v1.0.1 h1:R67WdB38UK6h2BYsTe45eOB5/W6Ef+1rd4Rb4MEpNfY=
+github.com/libdns/timeweb v1.0.1/go.mod h1:v9sKUolTjDLvOifbkjjnxlXCLGVgZ+fiO2+P12VMSRE=
 github.com/mholt/acmez/v2 v2.0.2 h1:OmK6xckte2JfKGPz4OAA8aNHTiLvGp8tLzmrd/wfSyw=
 github.com/mholt/acmez/v2 v2.0.2/go.mod h1:fX4c9r5jYwMyMsC+7tkYRxHibkOTgta5DIFGoe67e1U=
 github.com/miekg/dns v1.1.62 h1:cN8OuEF1/x5Rq6Np+h1epln8OiyPWV+lROx9LxcGgIQ=

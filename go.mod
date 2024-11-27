@@ -1,4 +1,4 @@
-module github.com/caddy-dns/selectel
+module github.com/nlif-m/caddy-dns-timeweb
 
 go 1.22.0
 
@@ -6,7 +6,7 @@ toolchain go1.23.0
 
 require (
 	github.com/caddyserver/caddy/v2 v2.8.4
-	github.com/libdns/selectel v1.0.0
+	github.com/libdns/timeweb v1.0.1
 )
 
 require (
