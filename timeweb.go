@@ -1,8 +1,6 @@
 package timewebcaddy
 
 import (
-	"fmt"
-
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	"github.com/libdns/timeweb"
@@ -19,7 +17,7 @@ func init() {
 func (Provider) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
 		ID:  "dns.providers.timeweb",
-		New: func() caddy.Module { return &Provider{&timeweb.Provider{}} },
+		New: func() caddy.Module { return &Provider{timeweb.Provider{}} },
 	}
 }
 
@@ -51,8 +49,6 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 	}
 
 	p.Provider.ApiURL = "https://api.timeweb.cloud/api/v1"
-	fmt.Println("TEST")
-	fmt.Println(p.Provider.ApiURL)
 	if p.Provider.ApiURL == "" {
 		return d.Err("missing ApiURL")
 	}
