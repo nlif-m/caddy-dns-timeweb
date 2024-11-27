@@ -1,8 +1,6 @@
 package timewebcaddy
 
 import (
-	"fmt"
-
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	"github.com/libdns/timeweb"
@@ -27,25 +25,14 @@ func (Provider) CaddyModule() caddy.ModuleInfo {
 func (p *Provider) Provision(ctx caddy.Context) error {
 	p.Provider.ApiURL = caddy.NewReplacer().ReplaceAll(p.Provider.ApiURL, "")
 	p.Provider.ApiToken = caddy.NewReplacer().ReplaceAll(p.Provider.ApiToken, "")
-	fmt.Println("Hello provision")
+	p.Provider.ApiURL = "https://api.timeweb.cloud/api/v1"
 	return nil
 }
 
 func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
-	fmt.Println("Hello unmarshal")
 	for d.Next() {
 		for nesting := d.Nesting(); d.NextBlock(nesting); {
 			switch d.Val() {
-			case "api_url":
-				if p.Provider.ApiURL != "" {
-					return d.Err("ApiURL already set")
-				}
-				if d.NextArg() {
-					p.Provider.ApiURL = d.Val()
-				}
-				if d.NextArg() {
-					return d.ArgErr()
-				}
 			case "api_token":
 				if p.Provider.ApiToken != "" {
 					return d.Err("ApiToken already set")
