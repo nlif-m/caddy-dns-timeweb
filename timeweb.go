@@ -25,11 +25,11 @@ func (Provider) CaddyModule() caddy.ModuleInfo {
 func (p *Provider) Provision(ctx caddy.Context) error {
 	p.Provider.ApiURL = caddy.NewReplacer().ReplaceAll(p.Provider.ApiURL, "")
 	p.Provider.ApiToken = caddy.NewReplacer().ReplaceAll(p.Provider.ApiToken, "")
-	p.Provider.ApiURL = "https://api.timeweb.cloud/api/v1"
 	return nil
 }
 
 func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
+
 	for d.Next() {
 		for nesting := d.Nesting(); d.NextBlock(nesting); {
 			switch d.Val() {
@@ -49,6 +49,7 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 		}
 	}
 
+	p.Provider.ApiURL = "https://api.timeweb.cloud/api/v1"
 	if p.Provider.ApiURL == "" {
 		return d.Err("missing ApiURL")
 	}
